@@ -1,0 +1,146 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Luxury ivory background */
+    --background: 40 20% 97%;
+    --foreground: 220 60% 15%;
+
+    /* Card styling */
+    --card: 0 0% 100%;
+    --card-foreground: 220 60% 15%;
+
+    /* Popover styling */
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 60% 15%;
+
+    /* Royal navy primary */
+    --primary: 220 60% 20%;
+    --primary-foreground: 40 20% 97%;
+
+    /* Gold accent */
+    --secondary: 45 100% 51%;
+    --secondary-foreground: 220 60% 15%;
+
+    /* Muted tones */
+    --muted: 40 15% 92%;
+    --muted-foreground: 220 20% 45%;
+
+    /* Gold accent alternative */
+    --accent: 45 100% 51%;
+    --accent-foreground: 220 60% 15%;
+
+    /* Destructive states */
+    --destructive: 0 70% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    /* Borders and inputs */
+    --border: 45 30% 85%;
+    --input: 45 30% 90%;
+    --ring: 45 100% 51%;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    /* Dark luxury navy background */
+    --background: 220 60% 8%;
+    --foreground: 40 20% 95%;
+
+    /* Dark card styling */
+    --card: 220 50% 12%;
+    --card-foreground: 40 20% 95%;
+
+    /* Dark popover */
+    --popover: 220 50% 12%;
+    --popover-foreground: 40 20% 95%;
+
+    /* Gold remains primary accent in dark mode */
+    --primary: 45 100% 51%;
+    --primary-foreground: 220 60% 15%;
+
+    /* Navy secondary in dark */
+    --secondary: 220 40% 25%;
+    --secondary-foreground: 40 20% 95%;
+
+    /* Dark muted tones */
+    --muted: 220 40% 18%;
+    --muted-foreground: 220 15% 65%;
+
+    /* Gold accent in dark */
+    --accent: 45 100% 51%;
+    --accent-foreground: 220 60% 15%;
+
+    /* Destructive in dark */
+    --destructive: 0 70% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    /* Dark borders */
+    --border: 220 40% 25%;
+    --input: 220 40% 20%;
+    --ring: 45 100% 51%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display;
+  }
+}
+
+/* Custom utility classes for luxury design */
+@layer utilities {
+  .gold-divider {
+    @apply h-px bg-gradient-to-r from-transparent via-accent to-transparent;
+  }
+
+  .hover-lift {
+    @apply transition-all duration-300 hover:-translate-y-1 hover:shadow-xl;
+  }
+
+  .gold-border {
+    @apply border border-accent/30;
+  }
+
+  .luxury-gradient {
+    @apply bg-gradient-to-br from-primary via-primary/90 to-accent/20;
+  }
+}
